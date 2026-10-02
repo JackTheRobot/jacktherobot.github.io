@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-color: #eae8ec
+    }
+
+    a {
+        color: #4b162b;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'IBM Plex Sans', serif;
+    }
+
+    figcaption {
+        text-align: center;
+        font-family: 'IBM Plex Sans', serif;
+        font-size: 0.8em;
+    }
+
+    #header_image {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+        #header_image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #4b162b;
+        }
+
+    #menu_button {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        width: 95%;
+        position: relative;
+        right: 20px;
+        margin-bottom: 50px;
+    }
+
+        #menu ul {
+            list-style: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        #menu li {
+            display: inline-block;
+            font-size: 1.4em;
+        }
+
+        #menu p {
+            margin-top: 0;
+            padding: 8px;
+            color: #4b162b;
+        }
+
+            #menu p:hover {
+                color: white;
+                background-color: #4b162b;
+            }
+
+
+
+    /*---HOMEPAGE---*/
+
+    #homepage {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #homepage_content {
+        width: 60%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+    }
+
+    #bio {
+        width: 40%;
+        margin-right: 20%;
+        float: left;
+    }
+
+        #bio p {
+            border-top-style: solid;
+            border-top-width: 2px;
+            border-top-color: #4b162b;
+            border-bottom-style: solid;
+            border-bottom-width: 2px;
+            border-bottom-color: #4b162b;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            max-width: 300px;
+        }
+
+    #profile_image {
+        width: 40%;
+        float: left;
+        vertical-align: middle;
+    }
+
+        #profile_image img {
+            width: 100%;
+            max-width: 300px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #4b162b;
+        }
+
+    #mobile_profile_image {
+        display: none;
+    }
+
+    /*---CONTENT PAGES---*/
+
+    .subpage {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subpage_content {
+        width: 60%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content_grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+    }
+
+    .content_grid_header {
+        width: 100%;
+        grid-column: span 3;
+        font-size: 2em;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-width: 2px;
+        border-color: #4b162b;
+        margin-bottom: 20px;
+    }
+
+    .content_grid_text_left {
+        width: 100%;
+        grid-column-start: 1;
+        margin-bottom: 20px;
+    }
+
+    .content_grid_image_right {
+        width: 100%;
+        grid-column-start: 3;
+        margin-bottom: 20px;
+    }
+
+        .content_grid_image_right img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .content_grid_image_right iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+        }
+
+    .content_grid_text_right {
+        width: 100%;
+        grid-column-start: 3;
+        margin-bottom: 20px;
+    }
+
+    .content_grid_image_left {
+        width: 100%;
+        grid-column-start: 1;
+        margin-bottom: 20px;
+    }
+
+        .content_grid_image_left img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 600px;
+        }
+
+        .content_grid_image_left iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+        }
+
+    .content_grid_replacement_text {
+        display: none;
+    }
+
+
+
+    /*---CONTACT---*/
+
+
+
+    /*---MOBILE*/
+
+    @media (max-width:600px) {
+        #header_image {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+
+        #menu_button {
+            display: block;
+            width: 100%;
+            background-color: #4b162b;
+            padding-top: 0;
+            border-top: 0;
+            margin-top: 0;
+        }
+
+            #menu_button p {
+                text-align: center;
+                font-size: 1.5em;
+                font-family: 'IBM Plex Sans', serif;
+                color: white;
+                padding-top: 0;
+                border-top: 0;
+                margin-top: 0;
+            }
+
+        #menu {
+            display: none;
+        }
+
+            #menu li {
+                display: block;
+                margin-bottom: 20px;
+                font-size: 1.5em;
+            }
+
+
+
+        /*---HOMEPAGE---*/
+
+        #homepage_content {
+            display: inline-block;
+            width: 80%;
+        }
+
+        #profile_image {
+            display: none;
+        }
+
+        #mobile_profile_image {
+            display: block;
+        }
+
+            #mobile_profile_image img {
+                width: 100%;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #4b162b;
+            }
+
+        #bio {
+            width: 100%;
+            margin-right: 0%;
+            float: none;
+        }
+
+            #bio p {
+                max-width: none;
+                text-align: center;
+            }
+
+
+
+
+
+        /*---MUSIC---*/
+
+        .subpage_content {
+            width: 80%;
+        }
+
+        .content_grid {
+            width: 100%;
+            grid-template-columns: 100%;
+        }
+
+        .content_grid_header {
+            font-size: 1.5em;
+        }
+
+        .content_grid_text_left {
+            display: none;
+        }
+
+        .content_grid_replacement_text {
+            display: block;
+            grid-column: 1 / -1;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .content_grid_image_right {
+            grid-column-start: 1;
+        }
+
+        .content_grid_text_right {
+            grid-column-start: 1;
+        }
+
+        /*---PODCASTS---*/
+
+
+
+        /*---GAMES---*/
+
+
+
+        /*---CONTACT---*/
+
+
+
+    }
+
+
+
+    /*---HIDE PAGES ON STARTUP---*/
+    #music_page {
+        display: none;
+    }
+
+    #podcasts_page {
+        display: none;
+    }
+
+    #games_page {
+        display: none;
+    }
+
+    #contact_page {
+        display: none;
+    }
+</style>
+
+<script>
+    
+    function openCloseMenu() {
+            var x = document.getElementById("menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        function openHome() {
+            var homePage = document.getElementById("homepage");
+            var musicPage = document.getElementById("music_page");
+            var podcastsPage = document.getElementById("podcasts_page");
+            var gamesPage = document.getElementById("games_page");
+            var contactPage = document.getElementById("contact_page");
+
+            homePage.style.display = "flex";
+            musicPage.style.display = "none";
+            podcastsPage.style.display = "none";
+            gamesPage.style.display = "none";
+            contactPage.style.display = "none";
+
+            hideMenuOnMobile();
+        }
+
+        function openMusic() {
+            var homePage = document.getElementById("homepage");
+            var musicPage = document.getElementById("music_page");
+            var podcastsPage = document.getElementById("podcasts_page");
+            var gamesPage = document.getElementById("games_page");
+            var contactPage = document.getElementById("contact_page");
+
+            homePage.style.display = "none";
+            musicPage.style.display = "flex";
+            podcastsPage.style.display = "none";
+            gamesPage.style.display = "none";
+            contactPage.style.display = "none";
+
+            hideMenuOnMobile();
+        }
+
+        function openPodcasts() {
+            var homePage = document.getElementById("homepage");
+            var musicPage = document.getElementById("music_page");
+            var podcastsPage = document.getElementById("podcasts_page");
+            var gamesPage = document.getElementById("games_page");
+            var contactPage = document.getElementById("contact_page");
+
+            homePage.style.display = "none";
+            musicPage.style.display = "none";
+            podcastsPage.style.display = "flex";
+            gamesPage.style.display = "none";
+            contactPage.style.display = "none";
+
+            hideMenuOnMobile();
+        }
+
+        function openGames() {
+            var homePage = document.getElementById("homepage");
+            var musicPage = document.getElementById("music_page");
+            var podcastsPage = document.getElementById("podcasts_page");
+            var gamesPage = document.getElementById("games_page");
+            var contactPage = document.getElementById("contact_page");
+
+            homePage.style.display = "none";
+            musicPage.style.display = "none";
+            podcastsPage.style.display = "none";
+            gamesPage.style.display = "flex";
+            contactPage.style.display = "none";
+
+            hideMenuOnMobile();
+        }
+
+        function openContact() {
+            var homePage = document.getElementById("homepage");
+            var musicPage = document.getElementById("music_page");
+            var podcastsPage = document.getElementById("podcasts_page");
+            var gamesPage = document.getElementById("games_page");
+            var contactPage = document.getElementById("contact_page");
+
+            homePage.style.display = "none";
+            musicPage.style.display = "none";
+            podcastsPage.style.display = "none";
+            gamesPage.style.display = "none";
+            contactPage.style.display = "flex";
+
+            hideMenuOnMobile();
+        }
+
+        function hideMenuOnMobile() {
+            if (window.innerWidth < 600) {
+                document.getElementById("menu").style.display = "none";
+            }
+        }
+
+</script>
+
+
+<head>
+    <link rel="shortcut icon" href="https://i.imgur.com/1q2UqzX.jpg">
+    <title>Jack The Robot</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+
+<body>
+
+    <div id="header_image">
+        <img src="Website Images/Scarf Cropped 2.jpg" alt="JTR">
+    </div>
+
+    <div id="menu_button">
+        <p onClick="openCloseMenu()">Menu</p>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><p onClick="openHome()">Home</p></li>
+            <li><p onClick="openGames()">Games</p></li>
+            <li><p onClick="openMusic()">Stage</p></li>
+            <li><p onClick="openPodcasts()">Podcasts</p></li>
+            <li><p onClick="openContact()">Contact</p></li>
+        </ul>
+    </div>
+
+
+
+    <!---HOMEPAGE--->
+
+    <div id="homepage">
+        <div id="homepage_content">
+            <div id="mobile_profile_image">
+                <img src="Website Images/Profile image.jpg" alt="Profile Image">
+            </div>
+            <div id="bio">
+                <p>Jack Sibley (a.k.a. Jack The Robot) is a Yorkshire-based sound designer and creative technologist.</p>
+                <p>Using code, Qlab and care, he weaves innovative sonic textures through theatre, dance, podcasts and video games.
+            </div>
+            <div id="profile_image">
+                <img src="Website Images/Profile image.jpg" alt="Profile Image">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!---MUSIC--->
+
+    <div class="subpage" id="music_page">
+        <div class="subpage_content">
+            <div class="content_grid">
+
+                <!---OTHERHOOD--->
+
+                <div class="content_grid_header">
+                    <p>Otherhood - Old Bird Theatre</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>A grieving widow and a queer millennial discover the power of finding family in unexpected places.</br></br>A new theatre experience by <a href="https://www.instagram.com/oldbirdtheatre/" target="_blank">Old Bird Theatre</a> featuring an immersive multi-speaker sound system.</br></br>Composition and spatial programming by Jack The Robot.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <img src="Website Images/Otherhood.jpg" alt="Otherhood Logo">
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>A grieving widow and a queer millennial discover the power of finding family in unexpected places.</br></br>A new theatre experience by <a href="https://www.instagram.com/oldbirdtheatre/" target="_blank">Old Bird Theatre</a> featuring an immersive multi-speaker sound system.</br></br>Composition and spatial programming by Jack The Robot.</p>
+                </div>
+
+                <!---BATTY--->
+
+                <div class="content_grid_header">
+                    <p>Batty! - Victoria Firth</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <img src="Website Images/Batty.jpg" alt="Batty! Logo">
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>A new production from <a href="https://www.victoriafirth.co.uk/" target="_blank">Victoria Firth & Company</a> explores the wildness – as opposed to madness – of women, and how our feral side can reconnect us to ourselves and our environment.</br></br>Composition and sound design by Jack The Robot and <a href="https://pif-paf.co.uk/portfolio/eleanorhooper/" target="_blank">Eleanor Hooper</a>.</p>
+                </div>
+
+                <!---BRIGHTSIDE--->
+
+                <div class="content_grid_header">
+                    <p>Brightside - SLAP Collective</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>Brightside is a workout through a lifetime soundtracked by a millennial anthem. It is a new workout experience that combines the energy of a fitness class with a live dance theatre performance. Made by SLAP Collective this 50-minute immersive journey delves into the past, present, and future of a millennial.</br></br>Original soundtrack by Jack The Robot.</br></br>Find out more at the <a href="https://slapcollective.com/projects/brightside" target="_blank">SLAP Collective website</a>.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <iframe src="https://www.youtube.com/embed/I3x4KXWPwZw?si=VO7SAM-kdZEqTQsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>Brightside is a workout through a lifetime soundtracked by a millennial anthem. It is a new workout experience that combines the energy of a fitness class with a live dance theatre performance. Made by SLAP Collective this 50-minute immersive journey delves into the past, present, and future of a millennial.</br></br>Original soundtrack by Jack The Robot.</br></br>Find out more at the <a href="https://slapcollective.com/projects/brightside" target="_blank">SLAP Collective website</a>.</p>
+                </div>
+
+                <!---LOOK AFTER YOUR KNEES--->
+
+                <div class="content_grid_header">
+                    <p>Look After Your Knees - Natalie Bellingham</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <iframe src="https://www.youtube.com/embed/Fm3U8N4g1M8?si=xtawII9FUGbl8zXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>A new solo work by theatre maker, performer and physical comedian Natalie Bellingham. Look After Your Knees is a show about the pain and beauty of growing older, of connecting and unravelling, of taking hold and letting go.</br></br>Composition and sound design by Jack The Robot.</br></br>Find out more at <a href="https://lookafteryourknees.show/" target="_blank">the show's site</a>.</p>
+                </div>
+
+                <!---THESE FOUR WALLS--->
+
+                <div class="content_grid_header">
+                    <p>These Four Walls - Ellie Harrison & Matt Rogers</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>What has it truly been like to be bereaved during the COVID-19 pandemic? How have people coped, when infection control restrictions have made saying goodbye difficult or impossible, and expressions of love and companionship from friends, family and community have been disrupted by social distancing?</br></br>Drawing on national research exploring experiences of loss and grief during the pandemic, THESE FOUR WALLS is a short film that gives voice to all those who have been bereaved in the UK.</br></br>Composition by Jack The Robot.</br></br> Find out more about the amazing project <a href="https://www.griefseries.co.uk/home" target="_blank">The Grief Series</a>.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/709404846?h=50a5d69e59" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>What has it truly been like to be bereaved during the COVID-19 pandemic? How have people coped, when infection control restrictions have made saying goodbye difficult or impossible, and expressions of love and companionship from friends, family and community have been disrupted by social distancing?</br></br>Drawing on national research exploring experiences of loss and grief during the pandemic, THESE FOUR WALLS is a short film that gives voice to all those who have been bereaved in the UK.</br></br>Composition by Jack The Robot.</br></br> Find out more about the amazing project <a href="https://www.griefseries.co.uk/home" target="_blank">The Grief Series</a>.</p>
+                </div>
+
+                <!---THE POLAR BEAR IS DEAD--->
+
+                <div class="content_grid_header">
+                    <p>The Polar Bear (Is Dead) - Nat and Dani</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <iframe src="https://www.youtube.com/embed/pAalkVnZOSs?si=cJ20MzpEZKzy4KXR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>Have you ever thought about what it means to lose something forever? A treasured possession? Someone you love? Or an entire species?</br></br>Natalie and Daniele have made a show about loss and being alone that's ultimately full of hope. It includes a plant, a polar bear, the Spice Girls and a conversation with Natalie’s Mum about the end of the world.</br></br>Composition and sound design by Jack The Robot.</br></br><a href="https://www.instagram.com/thepolarbearisdead/" target="_blank">The Polar Bear (Is Dead) on Instagram</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---PODCASTS--->
+
+    <div class="subpage" id="podcasts_page">
+        <div class="subpage_content">
+            <div class="content_grid">
+
+                <!---OUT OF SORTS--->
+
+                <div class="content_grid_header">
+                    <p>Out of Sorts - The Remote Body</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <img src="Website Images/Out of Sorts.jpg" alt="Letty McHugh logo">
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>An anthology of crip, sick and disabled approaches to narrative, a plethora of approaches to the prompt 'narrative cripping'.</br></br>Audio engineering for audio version by Jack The Robot</br></br>Buy the anthology now at <a href="https://theremotebody.com/" target="_blank">the Remote Body website</a></p>
+                </div>
+
+                <!---OLD TUNES FRESH TAKES--->
+
+                <div class="content_grid_header">
+                    <p>Old Tunes Fresh Takes</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>A community-driven podcast featuring listeners' takes on traditional folk music. Hosted by Jack The Robot and <a href="https://www.hevelwood.com/" target="_blank">Hevelwood</a>.</br></br>Listen now via the <a href="https://oldtunesfreshtakes.com/" target="_blank">Old Tunes Fresh Takes website</a> or wherever you get your podcasts.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <img src="Website Images/otft-SocialLogo.png" alt="Old Tunes Fresh Takes Logo">
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>A community-driven podcast featuring listeners' takes on traditional folk music. Hosted by Jack The Robot and <a href="https://www.hevelwood.com/" target="_blank">Hevelwood</a>.</br></br>Listen now via the <a href="https://oldtunesfreshtakes.com/" target="_blank">Old Tunes Fresh Takes website</a> or wherever you get your podcasts.</p>
+                </div>
+
+                <!---LETTY MCHUGH--->
+
+                <div class="content_grid_header">
+                    <p>Emily Bronte is my Personal Enemy - Letty McHugh</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <img src="Website Images/Letty McHugh.jpg" alt="Letty McHugh logo">
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>A podcast written by Letty McHugh exploring life in Haworth, Multiple Sclerosis, and being haunted by Emily Bronte.</br></br>Recording, editing and composition by Jack The Robot.</br></br>Currently looking for further funding to make more episodes so please listen and provide feedback via <a href="https://www.lettymchugh.co.uk/portfolio/emily-bronte-is-my-personal-enemy" target="_blank">Letty's website</a>.</p>
+                </div>
+
+                <!---YQP--->
+
+                <div class="content_grid_header">
+                    <p>Young Quakers Podcast</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>The Young Quaker Podcast aims to be a space for young F/friends to able to express and explore their spirituality, engage in lively discussions, and be part of a supportive community of young adult Quakers.</br></br>Featured on <a href="https://www.bbc.co.uk/news/av/uk-england-nottinghamshire-43675068" target="_blank">BBC News</a> for the innovative 'silence episode'.</br></br>Editing and theme music by Jack The Robot.</br></br>Listen now on <a href="https://soundcloud.com/user-174940248" target="_blank">Soundcloud</a>.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <img src="Website Images/YQP.jpg" alt="YQP Logo">
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>The Young Quaker Podcast aims to be a space for young F/friends to able to express and explore their spirituality, engage in lively discussions, and be part of a supportive community of young adult Quakers.</br></br>Featured on <a href="https://www.bbc.co.uk/news/av/uk-england-nottinghamshire-43675068" target="_blank">BBC News</a> for the innovative 'silence episode'.</br></br>Editing and theme music by Jack The Robot.</br></br>Listen now on <a href="https://soundcloud.com/user-174940248" target="_blank">Soundcloud</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---GAMES--->
+
+    <div class="subpage" id="games_page">
+        <div class="subpage_content">
+            <div class="content_grid">
+
+                <!---BeatChip '95--->
+
+                <div class="content_grid_header">
+                    <p>BeatChip '95 - JTR Games</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>You find a beat up old PC in a hidden room with an arcane piece of music software. Can your beats lead you to success? Create tapes, get cash and upgrade your setup in this cosy music-making simulator</br></br>Wishlist and try the demo free now on <a href="https://store.steampowered.com/app/4250100/BeatChip_95/" target="_blank">Steam</a></br></br>Programming and composition by Jack The Robot</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <iframe src="https://www.youtube.com/embed/G-TGi5-ohvU?si=O7oMgn1Id8GJTxdO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>You find a beat up old PC in a hidden room with an arcane piece of music software. Can your beats lead you to success? Create tapes, get cash and upgrade your setup in this cosy music-making simulator</br></br>Wishlist and try the demo free now on <a href="https://store.steampowered.com/app/4250100/BeatChip_95/" target="_blank">Steam</a></br></br>Programming and composition by Jack The Robot</p>
+                </div>
+
+                <!---CAT ADOPTION TALES--->
+
+                <div class="content_grid_header">
+                    <p>Cat Adoption Tales - Closed Forum</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <img src="Website Images/CAT.jpg" alt="Cat Adoption Tales image">
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>Foster and care for adorable hand drawn cats in this cozy 2D sim set to original Lo-Fi music.</br></br>Get the game now on <a href="https://store.steampowered.com/app/4091580/Cat_Adoption_Tales/" target="_blank">Steam</a> or hear the soundtrack on <a href="https://jacktherobot.bandcamp.com/album/cat-adoption-tales-ost" target="_blank">Bandcamp</a></br></br>Soundtrack by Jack The Robot</p>
+                </div>
+
+                <!---CRESCENGO--->
+
+                <div class="content_grid_header">
+                    <p>Crescengo - SLAP Collective</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>Crescengo is a walking adventure you play on your phone. Commissioned by York Civic Trust, it takes players on a tour of 12 statues of the iconic tansy beetle, each representing a famous local trailblazer. Players must match the movements of the beetle by tapping on their screen and, if they’re quick enough, are rewarded with a short bio of the trailblazer and a piece of music.</br></br>Programming and composition by Jack The Robot.</br></br>For more information visit the <a href="https://slapcollective.com/" target="_blank">SLAP Collective website</a>.</br></br>Programming and composition by Jack The Robot.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <iframe src="https://www.youtube.com/embed/qSWQ0ElnzQ0?si=vcWBAiOaXHQz_StG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>Crescengo is a walking adventure you play on your phone. Commissioned by York Civic Trust, it takes players on a tour of 12 statues of the iconic tansy beetle, each representing a famous local trailblazer. Players must match the movements of the beetle by tapping on their screen and, if they’re quick enough, are rewarded with a short bio of the trailblazer and a piece of music.</br></br>For more information visit the <a href="https://slapcollective.com/" target="_blank">SLAP Collective website</a>.</br></br>Programming and composition by Jack The Robot.</p>
+                </div>
+
+                <!---ITS NOT YOU ITS ME--->
+
+                <div class="content_grid_header">
+                    <p>It's Not You It's M.E. - Closed Forum</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <img src="Website Images/It's Not You.jpg" alt="It's Not You It's M.E. screenshot">
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>It's Not You, It's M.E. is an interactive point-and-click game based on the artist’s experiences of living with Long COVID and M.E. It is a game you can't win, full of mini-games that often are impossible to complete.</br></br>Composition, sound design and audio integration by Jack The Robot.</br></br>Play it now and find out more at the <a href="https://www.closedforum.co.uk/projects/itsnot" target="_blank">Closed Forum website</a>.</p>
+                </div>
+
+                <!---BORED ON THE WARD--->
+
+                <div class="content_grid_header">
+                    <p>Bored on the Ward - SLAP Collective</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>Bored on the Ward is a mobile game made in collaboration with Blah Blah Theatre, South West Yorkshire NHS Trust, and patients on the Royal Calderdale Hospital Children's ward. Players travel to a hospital in an alternate universe and complete a number of minigames to put a band together and cure their boredom.</br></br>Programming by Jack The Robot.</br></br>Now available for <a href="https://play.google.com/store/apps/details?id=com.SLAPCollective.BoredontheWard&hl=en" target="_blank">Android</a> and <a href="https://apps.apple.com/gb/app/bored-on-the-ward/id6755676485" target="_blank">IPhone</a></p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <img src="Website Images/BOTW.jpg" alt="Bored on the Ward screenshot">
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>Bored on the Ward is a mobile game made in collaboration with Blah Blah Theatre, South West Yorkshire NHS Trust, and patients on the Royal Calderdale Hospital Children's ward. Players travel to a hospital in an alternate universe and complete a number of minigames to put a band together and cure their boredom.</br></br>Programming by Jack The Robot.</br></br>Now available for <a href="https://play.google.com/store/apps/details?id=com.SLAPCollective.BoredontheWard&hl=en" target="_blank">Android</a> and <a href="https://apps.apple.com/gb/app/bored-on-the-ward/id6755676485" target="_blank">IPhone</a></p>
+                </div>
+
+                <!---THE UNFORTUNATE LASS--->
+
+                <div class="content_grid_header">
+                    <p>The Unfortunate Lass - Hevelwood</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <img src="Website Images/UnfortunateLass.jpg" alt="The Unfortunate Lass screenshot">
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>An experiment in interactive performance, The Unfortunate Lass is a web app which allows audience members to provide the musical accompaniment to an otherwise a cappella performance by Hevelwood. Over the course of around 4 minutes, onscreen buttons split and morph to allow for a developing complexity of harmony.</br></br>Programming by Jack The Robot.</br></br>Find out more at the <a href="https://www.hevelwood.com/Index.html" target="_blank">Hevelwood website</a>.</p>
+                </div>
+
+                <!---YELLOW HANDKERCHIEF--->
+
+                <div class="content_grid_header">
+                    <p>Yellow Handkerchief - Hevelwood</p>
+                </div>
+
+                <div class="content_grid_text_left">
+                    <p>The Yellow Handkerchief web app allows users to arrange their own version of the song taken from Hevelwood's album 'Of Greatness Receding'. Play it now at <a href="https://hevelwood.com/yellow-handkerchief" target="_blank">Hevelwood's website</a>.</br></br>Programming by Jack The Robot.</p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <img src="Website Images/Yellow Handkerchief.png" alt="Yellow Handkerchief screenshot">
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>The Yellow Handkerchief web app allows users to arrange their own version of the song taken from Hevelwood's album 'Of Greatness Receding'. Play it now at <a href="https://hevelwood.com/yellow-handkerchief" target="_blank">Hevelwood's website</a>.</br></br>Programming by Jack The Robot.</p>
+                </div>
+
+                <!---ANXIETY ARCADE--->
+
+                <div class="content_grid_header">
+                    <p>Anxiety Arcade - Closed Forum</p>
+                </div>
+
+                <div class="content_grid_image_left">
+                    <iframe src="https://www.youtube.com/embed/-R8AJWo4OYA?si=m7SDRaqPcRcg9VmW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="content_grid_text_right">
+                    <p>Anxiety Arcade is a full-sized arcade machine exploring themes of anxiety and isolation. A love letter to 80s pop culture and classic video games, Anxiety Arcade is a digital space that allows you to reset and take a break from everything in your world.</br></br>Stop. Breathe. Press A to start.</br></br>Composition by Jack The Robot.</br></br>Find out more at the <a href="https://www.closedforum.co.uk/projects/anxiety-arcade" target="_blank">Closed Forum website</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---CONTACT--->
+
+    <div class="subpage" id="contact_page">
+        <div class="subpage_content">
+            <div class="content_grid">
+
+                <div class="content_grid_text_left">
+                    <p>For all composition and sound design enquiries, please drop me a line at jacksibley13_at_gmail.com.</br></br>For mobile and game dev please get in touch via the <a href="https://slapcollective.com/" target="_blank">SLAP Collective website</a></p>
+                </div>
+
+                <div class="content_grid_image_right">
+                    <figure>
+                        <img src="Website Images/Emma Sketch Cropped.png" alt="Jack The Robot sketch">
+                        <figcaption><i>Sketch of me during rehearsals for Otherhood by Emma Adams of <a href="https://www.instagram.com/oldbirdtheatre/" target="_blank">Old Bird Theatre</a></i></figcaption>
+                    </figure>
+                </div>
+
+                <div class="content_grid_replacement_text">
+                    <p>For all composition and sound design enquiries, please drop me a line at jacksibley13_at_gmail.com.</br></br>For mobile and game dev please get in touch via the <a href="https://slapcollective.com/" target="_blank">SLAP Collective website</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
