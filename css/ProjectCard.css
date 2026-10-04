@@ -56,6 +56,11 @@ a{
     color: var(--deepTeal);
 }
 
+.mobileImage{
+    display: none;
+    
+}
+
 .image,
 .imageRight{
     display: flex;
@@ -65,4 +70,30 @@ a{
 
 .imageRight{
     grid-column-start: 3;
+}
+
+@media(max-width:800px){
+    .imageRight{
+        display: none;
+    }
+
+    .ProjectCardRight p{
+        grid-column-start: 1;
+    }
+
+    .ProjectCardLeft p{
+        grid-column-start: 1;
+    }
+
+    .ProjectCardLeft,
+    .ProjectCardRight{
+        grid-template-columns: 100%;
+    }
+
+    .mobileImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column-start: 1;
+    }
 }

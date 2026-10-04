@@ -35,3 +35,28 @@ nav{
 .button:hover{
     background-color: var(--lightTeal);
 }
+
+@media (max-width: 600px){
+    #logo{
+        top:50px;
+    }
+
+    nav{
+        display:block;
+        top:100px;
+    }
+
+    .button{
+        display:block;
+        width: 30%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 70px;
+        font-size:1.5em;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
