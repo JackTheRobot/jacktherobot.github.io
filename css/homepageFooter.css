@@ -1,0 +1,16 @@
+#SocialLogos{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    text-align: center;
+    background-image: linear-gradient(var(--zeroOpacityTeal), var(--lightTeal));
+}
+
+.SocialLogo img{
+    height: 50px;
+    width: auto;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:30px;
+    margin-top:30px;
+}
