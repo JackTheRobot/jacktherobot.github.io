@@ -1,0 +1,21 @@
+#SocialLogos{
+    background-image: linear-gradient(var(--zeroOpacityTeal), var(--lightTeal));
+    display: flex;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.SocialLogo{
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.SocialLogo img{
+    display: inline-block;
+    height: 50px;
+    width: auto;
+}
