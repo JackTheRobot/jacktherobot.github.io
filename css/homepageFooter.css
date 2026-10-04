@@ -1,6 +1,7 @@
 #SocialLogos{
     position: absolute;
     bottom: 0;
+    left:0;
     width:100%;
     text-align: center;
     background-image: linear-gradient(var(--zeroOpacityTeal), var(--lightTeal));

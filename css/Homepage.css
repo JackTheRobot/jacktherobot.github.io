@@ -39,6 +39,7 @@ nav{
 @media (max-width: 600px){
     #logo{
         top:50px;
+        left:-20px;
     }
 
     nav{
@@ -51,7 +52,7 @@ nav{
         width: 30%;
         margin-left:auto;
         margin-right:auto;
-        margin-top: 70px;
+        margin-top: 30px;
         font-size:1.5em;
 
         padding-top: 10px;
